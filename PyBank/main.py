@@ -14,3 +14,9 @@ Worst_Month = ''
 
 month_month_change = []
 change_diff = []
+
+#Set path for csv file
+budget_data_csv = os.path.join("PyBank/Resources/budget_data.csv")
+
+
+
