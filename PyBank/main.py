@@ -18,5 +18,13 @@ change_diff = []
 #Set path for csv file
 budget_data_csv = os.path.join("PyBank/Resources/budget_data.csv")
 
+#Open and read budget_data csv
+with open(budget_data_csv) as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=",")
+
+# Read the header row first
+    csv_header = next(csvfile)
+    #print(f'Header: {csv_header}')
+
 
 
