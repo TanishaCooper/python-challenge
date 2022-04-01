@@ -73,11 +73,13 @@ print("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greates
 
 budget_file = os.path.join("Analysis", "PyBank_analysis.txt")
 
-with open(budget_file, "w") as outfile:
+with open(budget_file, "w") as output_csv_file:
 
-    outfile.write("Financial analysis\n")
-    outfile.write("---------------------------\n")
-    outfile.write(f"Total Months: {Month_Count}\n")
-    outfile.write(f"Total: ${Profil_Losses_Tot}\n")
-    outfile.write(f"Average Change: ${avgchange}\n")
-    
+    output_csv_file.write("Financial analysis\n")
+    output_csv_file.write("---------------------------\n")
+    output_csv_file.write(f"Total Months: {Month_Count}\n")
+    output_csv_file.write(f"Total: ${Profil_Losses_Tot}\n")
+    output_csv_file.write(f"Average Change: ${avgchange}\n")
+    output_csv_file.write(f"Greatest Increase in Profits: {Top_month} (${Greatest_Incr})\n")
+    output_csv_file.write(f"Greatest Decrease in Pofits: {Bottom_Month} (${Greatest_Decr})\n")
+
