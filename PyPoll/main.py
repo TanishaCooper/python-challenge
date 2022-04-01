@@ -9,6 +9,8 @@ candaidate_vote_list = []
 candidates = []
 candidate_percent = []
 candidate_count = 0
+voter_count = 0
+last_count = 0
 
 
 # Set path for election_data csvfile
@@ -35,6 +37,13 @@ for name in candaidate_vote_list:
         candidates.append(name)
         x = name
 #print(candidates)
+
+# Set first candadidate on the dandidate_vote_list for loop
+candidates = candaidate_vote_list[0]
+
+#print(candidates)
+
+
 
 
   
