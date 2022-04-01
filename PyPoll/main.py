@@ -62,6 +62,20 @@ for candidate in candidates:
     if last_count < voter_count:
         Winner = candidate
     print(f"{candidate}: {percent:.3%} ({voter_count})")
+
+    # Reset candidate votes to zero to name the winner
+    last_count = voter_count
+    voter_count = 0
+
+# Print election winner with popular vote
+print("---------------------")
+print(f"Winner: {Winner}")
+print("---------------------")
+
+
+
+
+
     
 
 
