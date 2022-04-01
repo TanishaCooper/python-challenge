@@ -26,5 +26,12 @@ with open(budget_data_csv) as csvfile:
     csv_header = next(csvfile)
     #print(f'Header: {csv_header}')
 
+# Track month changes
+for x in range(len(change_diff)-1):
+    Monthlychng = (change[1+1] - change[i])
+    month_month_change.append(Monthlychng)
+
+avgchange = statistics.mean(month_month_change)
+
 
 
