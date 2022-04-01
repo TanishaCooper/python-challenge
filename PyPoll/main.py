@@ -43,6 +43,11 @@ candidates = candaidate_vote_list[0]
 
 #print(candidates)
 
+# Print election results as demonstrated in homework
+print("Election Results")
+print("--------------------------")
+print(f"Total Votes: {total_votes}")
+
 
 
 
