@@ -53,15 +53,23 @@ for i in range(len(change_diff)-1):
 
 avgchange = statistics.mean(month_month_change)
 
-# Setup output view
+# Setup output view prior to output file
 print("Financial Analysis")
 print("----------------------------------")
 
 print("Total Months: " + str(Month_Count))
 print("Total: $" + str(Profil_Losses_Tot))
 print("Average Change is: $" + str(round(avgchange, 2)))
+
 print("Greatest Increase in Profits: " + str(Top_month) + " ($" + str(Greatest_Incr) + ")")
 print("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greatest_Decr) + ")")
+
+# Write data analysis to an output file
+with open("PyBank_analysis.txt" "w") as csvfile_output:
+
+    csvwriter = csv.writer(csvfile_output, delimiter=",")
+
+    csvwriter.writerow("Financial Analysis")
 
 
 
