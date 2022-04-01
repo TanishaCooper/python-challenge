@@ -1,4 +1,5 @@
 #Modules
+from itertools import count
 import os
 import csv
 
@@ -8,7 +9,7 @@ total_votes = 0
 candaidate_vote_list = []
 candidates = []
 candidate_percent = []
-candidate_count = 0
+candidate_count = []
 voter_count = 0
 last_count = 0
 
@@ -39,7 +40,7 @@ for name in candaidate_vote_list:
 #print(candidates)
 
 # Set first candadidate on the dandidate_vote_list for loop
-candidates = candaidate_vote_list[0]
+candidate = candaidate_vote_list[0]
 
 #print(candidates)
 
@@ -47,6 +48,21 @@ candidates = candaidate_vote_list[0]
 print("Election Results")
 print("--------------------------")
 print(f"Total Votes: {total_votes}")
+print("--------------------------")
+
+# Set loop for list of candidates who recieved votes, percentage of votes, total num for each candidate, and winner
+for i in candidates:
+    for vote in candaidate_vote_list:
+        if i == vote:
+            voter_count += 1
+    percent = voter_count/len(candaidate_vote_list)
+    candidate_percent.append(percent)
+    candidate_count.append(voter_count)
+
+    if last_count < voter_count:
+        Winner = candidate
+    print(f"{candidate}: {percent:.3%} ({voter_count})")
+
 
 
 
