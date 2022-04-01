@@ -8,9 +8,9 @@ Month_Count= 0
 Profil_Losses_Tot = 0
 Profit_Losses_Diff_Average = 0.0
 Greatest_Incr = 0
-Best_month = ''
+Top_month = ''
 Greatest_Decr = 0
-Worst_Month = ''
+Bottom_Month = ''
 
 float = 0.000000
 format_float = "{:.2f}".format(float)
@@ -37,11 +37,11 @@ with open(budget_data_csv) as csvfile:
         Profil_Losses_Tot += int(row[1])
 
         if int(row[1]) > Greatest_Incr:
-          Best_month = (row[0])
+          Top_month = (row[0])
           Greatest_Incr = int(row[1])
 
         elif int(row[1]) < Greatest_Decr:
-            Worst_Month = (row[0])
+            Bottom_Month = (row[0])
             Greatest_Decr = int(row[1])
 
         change_diff.append(int(row[1]))
@@ -60,8 +60,8 @@ print("----------------------------------")
 print("Total Months: " + str(Month_Count))
 print("Total: $" + str(Profil_Losses_Tot))
 print("Average Change is: $" + str(round(avgchange, 2)))
-print("Greatest Increase in Profits: " + str(Best_month) + " ($" + str(Greatest_Incr) + ")")
-
+print("Greatest Increase in Profits: " + str(Top_month) + " ($" + str(Greatest_Incr) + ")")
+print("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greatest_Decr) + ")")
 
 
 
