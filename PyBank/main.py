@@ -1,10 +1,16 @@
 # Modules
 import os
 import csv
-from re import X
 import statistics 
 
 #Setup variables integers and strings to start at 0
+
+
+
+month_month_change = []
+change_diff = []
+
+monthlychange = 0
 Month_Count= 0
 Profil_Losses_Tot = 0
 Profit_Losses_Diff_Average = 0.0
@@ -13,11 +19,9 @@ Top_month = ''
 Greatest_Decr = 0
 Bottom_Month = ''
 
-float = 0.000000
-format_float = "{:.2f}".format(float)
-monthlychange = 0
-month_month_change = []
-change_diff = []
+#float = 0.000000
+#format_float = "{:.2f}".format(float)
+
 
 #Set path for csv file
 budget_data_csv = os.path.join("PyBank/Resources/budget_data.csv")
@@ -67,14 +71,13 @@ print("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greates
 
 # Write data analysis to an output file
 
-x = open("PyBanck_analysis.txt", "w")
-x.write("Financial Analysis")
-x.write("--------------------------------")
+budget_file = os.path.join("Analysis", "PyBank_analysis.txt")
 
-x.write("Total Months: " + str(Month_Count))
-x.write("Total: $" + str(Profil_Losses_Tot))
-x.write("Average Change is: $" + str(round(avgchange, 2)))
+with open(budget_file, "w") as outfile:
 
-x.write("Greatest Increase in Profits: " + str(Top_month) + " ($" + str(Greatest_Incr) + ")")
-x.write("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greatest_Decr) + ")")
-
+    outfile.write("Financial analysis\n")
+    outfile.write("---------------------------\n")
+    outfile.write(f"Total Months: {Month_Count}\n")
+    outfile.write(f"Total: ${Profil_Losses_Tot}\n")
+    outfile.write(f"Average Change: ${avgchange}\n")
+    
