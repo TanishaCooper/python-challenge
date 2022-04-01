@@ -58,7 +58,8 @@ print("Financial Analysis")
 print("----------------------------------")
 
 print("Total Months: " + str(Month_Count))
-print("Average Change is: $" + str(format_float(avgchange)))
+print("Total: $" + str(Profil_Losses_Tot))
+print("Average Change is: $" + str(round(avgchange, 2)))
 
 
 
