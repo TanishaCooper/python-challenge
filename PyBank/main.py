@@ -60,6 +60,7 @@ print("----------------------------------")
 print("Total Months: " + str(Month_Count))
 print("Total: $" + str(Profil_Losses_Tot))
 print("Average Change is: $" + str(round(avgchange, 2)))
+print("Greatest Increase in Profits: " + str(Best_month) + " ($" + str(Greatest_Incr) + ")")
 
 
 
