@@ -20,7 +20,14 @@ with open(election_data_csv) as read_csvfile:
 
     # Read header row first
     csv_header = next(read_csvfile)
-    print(f'Header: {csv_header}')
+    #print(f'Header: {csv_header}')
+
+    
+    for row in csv_reader:
+        candaidate_vote_list.append(row[2])
+
+    total_votes = len(candaidate_vote_list)
+#print(total_votes)
 
   
 
