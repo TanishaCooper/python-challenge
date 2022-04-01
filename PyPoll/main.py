@@ -73,7 +73,20 @@ print(f"Winner: {Winner}")
 print("---------------------")
 
 
+# Output data to PyPoll_analysis.txt
+election_file = os.path.join("Analysis", "PyPoll_analysis.txt")
 
+with open(election_file, "w") as output_file:
+
+    output_file.write("Election Results\n")
+    output_file.write("-------------------------")
+    output_file.write(f"Total Votes: {total_votes}\n")
+    output_file.write("-------------------------")
+    for candidate in candidates: 
+        index = candidates.index(candidate)
+        output_file.write(f"{candidate}: {candidate_percent[index]:.3%} ({candidate_count[index]})\n ")
+    output_file.write("------------------------")
+    output_file.write(f"Winner: {Winner}\n")
 
 
     
