@@ -29,6 +29,14 @@ with open(election_data_csv) as read_csvfile:
     total_votes = len(candaidate_vote_list)
 #print(total_votes)
 
+# Name all candidates
+for name in candaidate_vote_list:
+    if name not in candidates:
+        candidates.append(name)
+        x = name
+#print(candidates)
+
+
   
 
 
