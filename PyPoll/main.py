@@ -3,8 +3,12 @@ import os
 import csv
 
 # Set variables
-Total_votes = 0
-Candidate_votes = {}
+total_votes = 0
+
+candaidate_vote_list = []
+candidates = []
+candidate_percent = []
+candidate_count = 0
 
 
 # Set path for election_data csvfile
@@ -16,21 +20,11 @@ with open(election_data_csv) as read_csvfile:
 
     # Read header row first
     csv_header = next(read_csvfile)
-    #print(f'Header: {csv_header}')
+    print(f'Header: {csv_header}')
 
-    # Read each row after header (1) to total votes
-    for row in csv_reader:
-        Total_votes += 1
-        if row[2] not in Candidate_votes:
-            Candidate_votes[row[2]] = 1
-        else: 
-            Candidate_votes[row[2]] =+ 1
+  
 
-#Test print output
-#print(str(Total_votes))
 
-# Setup output to print Total Votes
-print("Election Results")
-print("--------------------------")
-print(f"Total Votes: " + str(Total_votes))
-print("--------------------------")
+
+
+    
