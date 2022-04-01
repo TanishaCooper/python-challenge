@@ -1,6 +1,7 @@
 # Modules
 import os
 import csv
+from re import X
 import statistics 
 
 #Setup variables integers and strings to start at 0
@@ -65,12 +66,15 @@ print("Greatest Increase in Profits: " + str(Top_month) + " ($" + str(Greatest_I
 print("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greatest_Decr) + ")")
 
 # Write data analysis to an output file
-with open("PyBank_analysis.txt" "w") as csvfile_output:
 
-    csvwriter = csv.writer(csvfile_output, delimiter=",")
+x = open("PyBanck_analysis.txt", "w")
+x.write("Financial Analysis")
+x.write("--------------------------------")
 
-    csvwriter.writerow("Financial Analysis")
+x.write("Total Months: " + str(Month_Count))
+x.write("Total: $" + str(Profil_Losses_Tot))
+x.write("Average Change is: $" + str(round(avgchange, 2)))
 
-
-
+x.write("Greatest Increase in Profits: " + str(Top_month) + " ($" + str(Greatest_Incr) + ")")
+x.write("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greatest_Decr) + ")")
 
