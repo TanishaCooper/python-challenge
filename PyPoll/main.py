@@ -51,9 +51,9 @@ print(f"Total Votes: {total_votes}")
 print("--------------------------")
 
 # Set loop for list of candidates who recieved votes, percentage of votes, total num for each candidate, and winner
-for i in candidates:
+for candidate in candidates:
     for vote in candaidate_vote_list:
-        if i == vote:
+        if candidate == vote:
             voter_count += 1
     percent = voter_count/len(candaidate_vote_list)
     candidate_percent.append(percent)
@@ -62,6 +62,8 @@ for i in candidates:
     if last_count < voter_count:
         Winner = candidate
     print(f"{candidate}: {percent:.3%} ({voter_count})")
+    
+
 
 
 
