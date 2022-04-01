@@ -28,3 +28,9 @@ with open(election_data_csv) as read_csvfile:
 
 #Test print output
 #print(str(Total_votes))
+
+# Setup output to print Total Votes
+print("Election Results")
+print("--------------------------")
+print(f"Total Votes: " + str(Total_votes))
+print("--------------------------")
