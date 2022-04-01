@@ -4,9 +4,6 @@ import csv
 import statistics 
 
 #Setup variables integers and strings to start at 0
-
-
-
 month_month_change = []
 change_diff = []
 
@@ -70,7 +67,6 @@ print("Greatest Increase in Profits: " + str(Top_month) + " ($" + str(Greatest_I
 print("Greatest Decrease in Profits: " + str(Bottom_Month) + " ($" + str(Greatest_Decr) + ")")
 
 # Write data analysis to an output file
-
 budget_file = os.path.join("Analysis", "PyBank_analysis.txt")
 
 with open(budget_file, "w") as output_csv_file:
@@ -79,7 +75,7 @@ with open(budget_file, "w") as output_csv_file:
     output_csv_file.write("---------------------------\n")
     output_csv_file.write(f"Total Months: {Month_Count}\n")
     output_csv_file.write(f"Total: ${Profil_Losses_Tot}\n")
-    output_csv_file.write(f"Average Change: ${avgchange}\n")
+    output_csv_file.write(f"Average Change: ${round(avgchange,2)}\n")
     output_csv_file.write(f"Greatest Increase in Profits: {Top_month} (${Greatest_Incr})\n")
     output_csv_file.write(f"Greatest Decrease in Pofits: {Bottom_Month} (${Greatest_Decr})\n")
 
