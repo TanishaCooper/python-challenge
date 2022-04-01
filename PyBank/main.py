@@ -12,6 +12,9 @@ Best_month = ''
 Greatest_Decr = 0
 Worst_Month = ''
 
+float = 0.000000
+format_float = "{:.2f}".format(float)
+monthlychange = 0
 month_month_change = []
 change_diff = []
 
@@ -44,18 +47,18 @@ with open(budget_data_csv) as csvfile:
         change_diff.append(int(row[1]))
 
     # Track month changes
-    for i in range(len(change_diff)-1):
-        Monthlychng = (change[i+1] - change[i])
-        month_month_change.append(Monthlychng)
+for i in range(len(change_diff)-1):
+    monthlychange = (change_diff[i+1] - change_diff[i])
+    month_month_change.append(monthlychange)
 
-    avgchange = statistics.mean(month_month_change)
+avgchange = statistics.mean(month_month_change)
 
 # Setup output view
 print("Financial Analysis")
 print("----------------------------------")
 
 print("Total Months: " + str(Month_Count))
-print("Average Change is: $" + str(float(avgchange)))
+print("Average Change is: $" + str(format_float(avgchange)))
 
 
 
