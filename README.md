@@ -16,13 +16,13 @@ The analysis of PyBank's financial records used **budget_data.csv** financial da
 
 The output of the PyBank financial analysis results in a .txt file that include the following:
 
-> Financial analysis
-> ---------------------------
-> Total Months: 86
-> Total: $22564198
-> Average Change: $-8311.11
-> Greatest Increase in Profits: Mar-13 ($1141840)
-> Greatest Decrease in Pofits: Dec-10 ($-1194133)
+| Financial analysis
+| ---------------------------
+| Total Months: 86
+| Total: $22564198
+| Average Change: $-8311.11
+| Greatest Increase in Profits: Mar-13 ($1141840)
+| Greatest Decrease in Pofits: Dec-10 ($-1194133)
 
 ## PyPoll Vote Analysis
 
