@@ -16,11 +16,32 @@ The analysis of PyBank's financial records used **budget_data.csv** financial da
 
 The output of the PyBank financial analysis results in a .txt file that include the following:
 
-Financial Analysis
-----------------------------
+Financial analysis
+---------------------------
 Total Months: 86
-Total: $38382578
-Average  Change: $-2315.12
-Greatest Increase in Profits: Feb-2012 ($1926159)
-Greatest Decrease in Profits: Sep-2013 ($-2196167)
+Total: $22564198
+Average Change: $-8311.11
+Greatest Increase in Profits: Mar-13 ($1141840)
+Greatest Decrease in Pofits: Dec-10 ($-1194133)
 
+## PyPoll Vote Analysis
+
+PyPoll election analyzes a small, rural town voting process. The goal is to improve or modernize the voting process. PyPoll's datasets is pulled from ***election_data.csv***. The latter is composed of three columns: **Voter ID**, **County**, and **Candidate**. The Python script will analyze the votes and calcuate the following:
+
+> - Total number of votes cast
+> - Complete list of votes each candidate won
+> - Percentage of votes each candidates won
+> - Total number of votes each candidate won
+> - Winner of the election based on popular vote
+
+The analysis output is the following via a .txt file:
+
+Election Results
+-------------------------
+Total Votes: 369711
+-------------------------
+Charles Casper Stockham: 23.049% (85213)
+Diana DeGette: 73.812% (272892)
+Raymon Anthony Doane: 3.139% (11606)
+-------------------------
+Winner: Diana DeGette
