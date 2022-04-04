@@ -38,7 +38,7 @@ PyPoll election analyzes a small, rural town voting process. The goal is to impr
 
 The analysis output is the following via a .txt file:
 
-    ```text
+    ```
     Election Results
     -------------------------
     Total Votes: 369711
