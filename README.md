@@ -28,8 +28,6 @@ The output of the PyBank financial analysis results in a .txt file that include 
 
 ## PyPoll Vote Analysis
 
-!(Voter_Poll_images.jpeg)
-
 PyPoll election analyzes a small, rural town voting process. The goal is to improve or modernize the voting process. PyPoll's datasets is pulled from ***election_data.csv***. The latter is composed of three columns: **Voter ID**, **County**, and **Candidate**. The Python script will analyze the votes and calcuate the following:
 
 > - Total number of votes cast
