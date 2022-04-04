@@ -48,4 +48,4 @@ The analysis output is the following via a .txt file:
     Raymon Anthony Doane: 3.139% (11606)
     -------------------------
     Winner: Diana DeGette
-    ```R
+    ```
