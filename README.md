@@ -16,7 +16,7 @@ The analysis of PyBank's financial records used **budget_data.csv** financial da
 
 The output of the PyBank financial analysis results in a .txt file that include the following:
 
-    ```text
+    ```
     Financial analysis
     ---------------------------
     Total Months: 86
