@@ -6,7 +6,7 @@ The Python challenge's output are two scripts that analyzed financial records of
 
 ## Python Bank Analysis
 
-![PyBank Financial Analysis](/Users/tanishacooper/Desktop/Data_Class/Fianancial_Analysis_Image.jpeg)
+!(/Users/tanishacooper/Desktop/Data_Class/Fianancial_Analysis_Image.jpeg)
 
 The analysis of PyBank's financial records used **budget_data.csv** financial data. The dataset composed of two columns: Date and Profit/Losses. The Python script analyzed the dataset and calculated the following:
 
